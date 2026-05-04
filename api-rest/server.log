@@ -1,0 +1,7 @@
+
+> kms-nodejs@1.0.0 start
+> node src/server.js
+
+✅ Database synchronized
+🚀 KMS Server running on port 8000
+::ffff:127.0.0.1 - - [04/May/2026:16:45:32 +0000] "GET /api/keys HTTP/1.1" 401 36 "-" "curl/7.81.0"
