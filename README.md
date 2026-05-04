@@ -1,7 +1,7 @@
 You can place this `README.md` in the root of your GitHub repository. It includes all the necessary information for users to understand, install, and use the KMS project.
 
 ```markdown
-# 🔐 Advanced KMS - Node.js + PostgreSQL
+# Simple KMS - Node.js + PostgreSQL
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D18-brightgreen)](https://nodejs.org/)
@@ -11,34 +11,34 @@ You can place this `README.md` in the root of your GitHub repository. It include
 **A robust, production-ready Key Management System (KMS) built with Node.js and PostgreSQL.**  
 Supports multiple cryptographic algorithms, key expiration, revocation, rotation, audit logging, and rate limiting.
 
-## ✨ Features
+##  Features
 
-- 🔑 **Multiple Algorithms** – RSA (2048/4096), EC (secp256k1), Ed25519  
-- ⏳ **Key Expiration** – Set `expires_at`; expired keys cannot be used  
-- 🚫 **Revocation** – Mark keys as revoked with a reason  
-- 🔄 **Key Rotation** – Generate new versions while optionally keeping old keys active  
-- 📜 **Complete Audit Log** – Every action (create, sign, rotate, revoke) is logged  
-- 🛡️ **API Key Authentication** – Clients authenticate with a hashed API key  
-- 🧂 **Encrypted Private Keys** – AES-256-GCM encryption using a master key derived from a password (PBKDF2)  
-- ⏱️ **Rate Limiting** – Configurable limits per endpoint (prevents abuse)  
-- 🐘 **PostgreSQL Storage** – Reliable, ACID-compliant database  
-- 🐳 **Docker Compose** – Easy PostgreSQL setup  
-- 🚀 **Ready for Production** – Helmet, CORS, Morgan logging, environment-based configuration
+-  **Multiple Algorithms** – RSA (2048/4096), EC (secp256k1), Ed25519  
+-  **Key Expiration** – Set `expires_at`; expired keys cannot be used  
+-  **Revocation** – Mark keys as revoked with a reason  
+-  **Key Rotation** – Generate new versions while optionally keeping old keys active  
+-  **Complete Audit Log** – Every action (create, sign, rotate, revoke) is logged  
+-  **API Key Authentication** – Clients authenticate with a hashed API key  
+-  **Encrypted Private Keys** – AES-256-GCM encryption using a master key derived from a password (PBKDF2)  
+-  **Rate Limiting** – Configurable limits per endpoint (prevents abuse)  
+-  **PostgreSQL Storage** – Reliable, ACID-compliant database  
+-  **Docker Compose** – Easy PostgreSQL setup  
+-  **Ready for Production** – Helmet, CORS, Morgan logging, environment-based configuration
 
-## 📋 Prerequisites
+##  Prerequisites
 
 - Node.js **18+** (recommended LTS)
 - npm (comes with Node.js)
 - Docker & Docker Compose (optional, for PostgreSQL container)
 - PostgreSQL 15+ (if not using Docker)
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/advanced-kms.git
-cd advanced-kms
+git clone https://github.com/yourusername/simple-kms.git
+cd simple-kms
 ```
 
 ### 2. Set up environment variables
@@ -84,7 +84,7 @@ npm run dev
 
 The server will run on `http://localhost:8000` by default.
 
-## 📚 API Documentation
+##  API Documentation
 
 All endpoints (except `/health` and `/clients`) require the header:
 
@@ -254,7 +254,7 @@ curl -X GET "http://localhost:8000/audit?limit=50" \
 }
 ```
 
-## ⚙️ Environment Variables
+##  Environment Variables
 
 | Variable                     | Description                                           | Default                        |
 |------------------------------|-------------------------------------------------------|--------------------------------|
@@ -268,7 +268,7 @@ curl -X GET "http://localhost:8000/audit?limit=50" \
 
 > **IMPORTANT:** Always override `MASTER_PASSWORD` and `MASTER_SALT` in production. The master key is derived from these values and is **never stored**. Losing them will make all encrypted private keys unrecoverable.
 
-## 🛡️ Security Highlights
+##  Security Highlights
 
 - **API keys** are stored as SHA‑256 hashes (plaintext never saved).
 - **Private keys** are encrypted with AES‑256‑GCM using a master key derived via PBKDF2.
@@ -278,7 +278,7 @@ curl -X GET "http://localhost:8000/audit?limit=50" \
 - **CORS** is configurable (default allows all, adjust as needed).
 - **Expired/revoked keys** are automatically rejected for signing.
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -290,11 +290,11 @@ Contributions are welcome! Please follow these steps:
 
 Please ensure your code passes existing tests and includes appropriate tests for new functionality.
 
-## 📄 License
+##  License
 
 Distributed under the MIT License. See `LICENSE` file for more information.
 
-## ❤️ Acknowledgments
+##  Acknowledgments
 
 - [Node.js](https://nodejs.org/) – JavaScript runtime
 - [Express](https://expressjs.com/) – Web framework
@@ -304,7 +304,7 @@ Distributed under the MIT License. See `LICENSE` file for more information.
 
 ---
 
-Made with ❤️ by [Your Name](https://github.com/yourusername) – open source and free for everyone.
+Made with ❤️ by Me(https://github.com/aca9710) – open source and free for everyone.
 ```
 
 You can copy this directly into your `README.md` file. If you want to add badges for build status, code coverage, etc., you can later insert them at the top. The MIT license is assumed; you should add a `LICENSE` file if you intend to release it.
