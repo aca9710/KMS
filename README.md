@@ -39,7 +39,6 @@ Supports multiple cryptographic algorithms, key expiration, revocation, rotation
 ```bash
 git clone https://github.com/yourusername/kms.git
 cd kms
-cd api-rest
 ```
 
 ### 2. Set up environment variables
@@ -52,38 +51,6 @@ cp .env.example .env
 
 Edit `.env` and **change** the `MASTER_PASSWORD` and `MASTER_SALT` to strong, unique values.
 
-### 3. Start PostgreSQL with Docker Compose (recommended)
-
-```bash
-docker-compose up -d
-```
-
-If you prefer a local PostgreSQL instance, create a database named `kms_db` and update `DATABASE_URL` in `.env`.
-
-### 4. Install dependencies
-
-```bash
-npm install
-```
-
-### 5. Run database migrations (automatic)
-
-The server will automatically create tables on startup using `sequelize.sync()`.  
-No manual migration steps required.
-
-### 6. Start the server
-
-```bash
-npm start
-```
-
-For development with auto‑restart:
-
-```bash
-npm run dev
-```
-
-The server will run on `http://localhost:8000` by default.
 
 ##  API Documentation
 
